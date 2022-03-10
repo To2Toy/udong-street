@@ -1,0 +1,23 @@
+
+#header{
+    background-color: #FFE49E;
+    font-family: 'S-CoreDream-3Light';
+    
+}
+
+#title{
+    font-size:xx-large;
+    text-align: center;
+}
+
+a{
+    font-size: large;
+}
+
+.currTime{
+    font-size: medium;
+}
+
+.currLoc{
+    font-size: medium;
+}
