@@ -1,19 +1,15 @@
 import { Global, css } from "@emotion/react";
 
-// @font-face {
-//     font-family: 'S-CoreDream-6Bold';
-//     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
-//     font-weight: normal;
-//     font-style: normal;
-// }
+
 
 const defaultStyle = css`
-  @import url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff");
+@import url("../asset/S-Core-Dream-light/s-core-dream.css");
   * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "s-core-dream-light", sans-serif !important;
+    font-size:50px;
   }
   html,
   body {
