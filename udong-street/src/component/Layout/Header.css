@@ -8,6 +8,8 @@
 #title{
     font-size:xx-large;
     text-align: center;
+    clear: both;
+    padding-bottom: 10px;
 }
 
 a{
@@ -16,8 +18,11 @@ a{
 
 .currTime{
     font-size: medium;
+    float: left;
 }
 
-.currLoc{
-    font-size: medium;
+.source{
+    font-size: small;
+    float: right;
+    padding: 10px;
 }
