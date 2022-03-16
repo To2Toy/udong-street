@@ -5,7 +5,12 @@ const CurrentDate = () => {
         <div className="currTime">
             <Clock format={'YYYY - MM - DD'}
             ticking={true}
-            timezone={'KR/Pacific'}
+            timezone={'Asia/Seoul'}
+            />
+            <br/>
+            <Clock format={'hh : mm : ss'}
+            ticking={true}
+            timezone={'Asia/Seoul'}
             />
         </div>
     )
