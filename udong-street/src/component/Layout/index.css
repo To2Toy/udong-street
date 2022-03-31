@@ -1,0 +1,35 @@
+.footer {
+    padding:30px 0;
+    margin: 30px;
+    border-top:1px solid #d9d9d9;
+    font-size:18px;
+    background-color:#dac3c3;
+    color:rgb(22, 22, 22);
+}
+
+
+.header{
+  background-color: #FFE49E;
+}
+
+.title{
+  font-size:xx-large;
+  text-align: center;
+  clear: both;
+  padding-bottom: 10px;
+}
+
+a{
+  font-size: large;
+}
+
+.currTime{
+  font-size: medium;
+  float: left;
+}
+
+.source{
+  font-size: small;
+  float: right;
+  padding: 10px;
+}
