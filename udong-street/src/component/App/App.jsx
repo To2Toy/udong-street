@@ -1,14 +1,13 @@
-import GlobalStyle from "./GlobalStyle";
-import Layout from '../Layout/Layout'
+
+import Layout from '../Layout/index'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
 
 function App() {
   return (
-    <>
-    <GlobalStyle />
       <div className="App">
         <Layout/>
     </div>
-    </>
   );
 }
 
