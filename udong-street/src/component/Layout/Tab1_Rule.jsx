@@ -179,7 +179,7 @@ const Tab1_Rule = () => {
   const [category, setCategory] = useState(-1);
   return (
     <Container fluid>
-      <Container fluid>
+      <Container>
         <Recommendations></Recommendations>
       </Container>
       <Category setCategory={setCategory}></Category>
