@@ -1,4 +1,4 @@
-import logo from '/Users/omyeongju/react-app/udong-street/udong-street/src/component/asset/architecture-and-city.png'
+import logo from '../../asset/architecture-and-city.png'
 import './WheelCard.css'
 
 const WheelCard = (props) => {
