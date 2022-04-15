@@ -96,7 +96,7 @@ const mock = [
 ];
 
 const OrgList = (props) => {
-  if (props.category == -1) {
+  if (props.category === -1) {
     return mock.map((obj, idx) => (
       <div>
         <CardList key={idx} place={obj.detail}></CardList>
@@ -137,7 +137,7 @@ const RuleCard = (props) => {
         <ListGroupItem>
           <Image src={time} id="cardIcon" />
           운영 시간 :{" "}
-          {props.obj.start == props.obj.end
+          {props.obj.start === props.obj.end
             ? `제한 없음`
             : `${props.obj.start} ~ ${props.obj.end}`}
         </ListGroupItem>
