@@ -1,0 +1,14 @@
+img{
+    width:50%;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+#recBody{
+    margin: 10px;
+    text-align: center;
+}
+#message{
+    margin-top: 20px;
+    text-align: right;
+    font-weight: bold;
+}

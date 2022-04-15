@@ -1,7 +1,8 @@
 import time from "../asset/time.png";
-import person from "../asset/person.png"
-import notice from "../asset/notice.png"
-import eatable from "../asset/eatable.png"
+import person from "../asset/person.png";
+import notice from "../asset/notice.png";
+import eatable from "../asset/eatable.png";
+import Recommendations from "./atom/Recommendations";
 import {
   Card,
   Row,
@@ -178,6 +179,9 @@ const Tab1_Rule = () => {
   const [category, setCategory] = useState(-1);
   return (
     <Container fluid>
+      <Container fluid>
+        <Recommendations></Recommendations>
+      </Container>
       <Category setCategory={setCategory}></Category>
       <Container>
         <OrgList category={category}></OrgList>
