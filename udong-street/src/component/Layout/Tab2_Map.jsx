@@ -3,9 +3,8 @@ import logo from '../asset/architecture-and-city.png'
 import WheelCard from './atom/WheelCard'
 import Chart from './atom/Tab2_chart'
 import { useState } from 'react'
-import Test from './atom/Test'
 
-// 나중에 parsing할 때 사용
+// 나중에 parsing할 때 사용 ?
 // const cards = [...new Array(10)].map((x, i) => ({
 //     name: `card ${i}`,
 //     img: "https://source.unsplash.com/random"
@@ -17,12 +16,7 @@ const cards = ['전체', '서울', '광역시', '충남', '충북', '경남'].ma
 }))
 
 const Tab2_Map = () => {
-    const [area, setArea] = useState("")
-    const onChange = (params) => {
-        console.log("current area is " + area)
-        area = params
-        console.log("current area is " + area)
-    }
+    const [area, setArea] = useState('전체')
     return (
         <div>
             전국 확진 추이를 알아봅시다!
@@ -40,7 +34,6 @@ const Tab2_Map = () => {
                     <WheelCard name="강원" setArea={setArea}></WheelCard>
                 </HorizontalScroll>
             </div>
-            {/* <Test name={area}></Test> */}
             <Chart name={area}></Chart>
         </div>
 

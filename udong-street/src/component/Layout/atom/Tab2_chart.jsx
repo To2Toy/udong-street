@@ -33,8 +33,8 @@ const Styles = styled.div`
 
 const Tab2_chart = (props) => {
     const name = props.name
-    const columns =[{
-        Header: props.name,
+    const columns = [{
+        Header: name,
         columns: [
             {
                 Header: '지역',
@@ -62,7 +62,7 @@ const Tab2_chart = (props) => {
 
     return (
         <Styles>
-          <Table columns={columns} data={data} name={name} />
+            <Table columns={columns} data={data} />
         </Styles>
     )
 }
