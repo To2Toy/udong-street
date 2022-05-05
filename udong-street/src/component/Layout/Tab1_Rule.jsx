@@ -3,6 +3,8 @@ import person from "../asset/person.png";
 import notice from "../asset/notice.png";
 import eatable from "../asset/eatable.png";
 import Recommendations from "./atom/Recommendations";
+import HorizontalScroll from "react-scroll-horizontal";
+import WheelCard from "./atom/WheelCard";
 import {
   Card,
   Row,
@@ -19,7 +21,7 @@ const mockOrg = ["ALL", "식당 · 카페", "경조사", "체육시설", "학습
 
 const mock = [
   {
-    organization: "식당 · 카페",
+    organization: "식당 · 카페",
     detail: [
       {
         name: "식당 · 카페",
@@ -97,7 +99,7 @@ const mock = [
 ];
 
 const OrgList = (props) => {
-  if (props.category === -1) {
+  if (props.category === "ALL") {
     return mock.map((obj, idx) => (
       <div>
         <CardList key={idx} place={obj.detail}></CardList>
@@ -108,7 +110,10 @@ const OrgList = (props) => {
     <div>
       <CardList
         key={props.category}
-        place={mock[props.category].detail}
+        place={
+          mock[mock.findIndex((value) => value.organization == props.category)]
+            .detail
+        }
       ></CardList>
     </div>
   );
@@ -160,29 +165,25 @@ const RuleCard = (props) => {
     </Card>
   );
 };
-const Category = (props) => {
-  const result = [];
-  for (let i = 0; i < mockOrg.length; i++) {
-    result.push(
-      <button
-        onClick={() => {
-          props.setCategory(i - 1);
-        }}
-      >
-        {mockOrg[i]}
-      </button>
-    );
-  }
-  return result;
-};
 const Tab1_Rule = () => {
-  const [category, setCategory] = useState(-1);
+  const [category, setCategory] = useState("ALL");
+
   return (
     <Container fluid>
       <Container>
         <Recommendations></Recommendations>
       </Container>
-      <Category setCategory={setCategory}></Category>
+      <div id="scroll-horizontal" style={{ height: "200px" }}>
+        <HorizontalScroll pageLock={true} reverseScroll={true}>
+          <WheelCard name="ALL" setArea={setCategory}></WheelCard>
+          {mock.map((elem) => (
+            <WheelCard
+              name={elem.organization}
+              setArea={setCategory}
+            ></WheelCard>
+          ))}
+        </HorizontalScroll>
+      </div>
       <Container>
         <OrgList category={category}></OrgList>
       </Container>
