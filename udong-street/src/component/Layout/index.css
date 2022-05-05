@@ -49,10 +49,10 @@ a{
 }
 
 #cardIcon{
-  width: 20px;
+  width: 3%;
+  height: 3%;
   margin: 5px;
   margin-right: 20px;
-  /* padding-right: 10px; */
 }
 #cardTitle{
   font-weight:bold;
